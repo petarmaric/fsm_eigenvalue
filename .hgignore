@@ -1,2 +1,5 @@
 syntax: glob
 *.pyc
+dist/
+build/
+fsm_eigenvalue.egg-info/
