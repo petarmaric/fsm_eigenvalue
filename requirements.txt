@@ -1,0 +1,4 @@
+beam_integrals>=1.1,<2.0
+networkx>=1.11,<2.0
+numpy>=1.11,<2.0
+PyYAML>=3.11,<4.0
