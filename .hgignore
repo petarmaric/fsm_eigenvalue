@@ -3,3 +3,4 @@ syntax: glob
 dist/
 build/
 fsm_eigenvalue.egg-info/
+.vscode/
