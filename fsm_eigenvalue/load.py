@@ -18,7 +18,7 @@ def get_beam_type_id(geometry):
 
 def linspace_with_step(start, stop, step, **kwargs):
     # Workaround until https://github.com/numpy/numpy/issues/630 is resolved
-    num_samples = (stop - start) / step + 1
+    num_samples = np.round((stop - start) / step + 1)
     return np.linspace(start, stop, num_samples, **kwargs)
 
 def get_search_space_iterations(search_space):
