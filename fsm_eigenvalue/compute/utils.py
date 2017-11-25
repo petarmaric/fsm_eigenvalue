@@ -1,6 +1,9 @@
 import numpy as np
 
 
+MIN_EIGENVALUE = 10**-12
+
+
 def symmetrize_matrix(mat):
     return mat + mat.T - np.diag(np.diag(mat))
 
@@ -21,3 +24,9 @@ def assemble_local_matrix(X_uu, X_ww):
     ])
 
     return symmetrize_matrix(X)
+
+def clip_small_eigenvalues(eigenvalues):
+    eigenvalues[np.abs(eigenvalues)<=MIN_EIGENVALUE] = MIN_EIGENVALUE
+
+def get_relative_error(v, v_approx):
+    return np.abs(1 - v_approx / v)
