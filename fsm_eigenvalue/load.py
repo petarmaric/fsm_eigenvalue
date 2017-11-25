@@ -34,6 +34,7 @@ def get_transformation_matrix(dx, dz, b):
     sin_a = dz/b
     cos_a = dx/b
 
+    # As per eq. 3.58,3.59 from [Milasinovic1997]
     R = np.asmatrix(np.eye(8))
     R[0, 0] =  cos_a
     R[2, 0] = -sin_a
@@ -110,6 +111,7 @@ def precompute_material_properties(materials):
         data_keys = 'E_x, E_y, mu_x, mu_y, G_xy'.split(', ')
         E_x , E_y, mu_x, mu_y, G_xy = (material[k] for k in data_keys)
 
+        # As per eq. 2.20 from [Milasinovic1997]
         mu_xy = 1. - mu_x*mu_y
         material['K_x']  = E_x / mu_xy
         material['K_y']  = E_y / mu_xy
