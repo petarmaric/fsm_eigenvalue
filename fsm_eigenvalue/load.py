@@ -108,6 +108,9 @@ def precompute_material_properties(materials):
     for material in materials.values():
         material['ro'] /= 10**9 # convert mass density from [kg/m**3] to [kg/mm**3] before calc
 
+        # Mass matrix needs mass density normalized to 1 [m] of length, even if everything is done in [mm]
+        material['ro'] /= 10**3
+
         data_keys = 'E_x, E_y, mu_x, mu_y, G_xy'.split(', ')
         E_x , E_y, mu_x, mu_y, G_xy = (material[k] for k in data_keys)
 
