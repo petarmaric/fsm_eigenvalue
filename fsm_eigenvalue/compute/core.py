@@ -59,7 +59,12 @@ def perform_iteration(integral_db, beam_type, strip_data, materials, astiff_shap
     Phi_rel_err = get_relative_error(Phi_omega, Phi_sigma_cr)
 
     return (
+        a, t_b, m,
         omega, omega_approx, omega_rel_err,
         sigma_cr, sigma_cr_approx, sigma_cr_rel_err,
         Phi_omega, Phi_sigma_cr, Phi_rel_err,
     )
+
+def get_modal_composite(modal_raw_results):
+    best_result = min(modal_raw_results, key=lambda x: x[6]) # modal composite via sigma_cr
+    return best_result[:-3] # Exclude the `Phi_*` matrices, as we don't need them in modal composites
