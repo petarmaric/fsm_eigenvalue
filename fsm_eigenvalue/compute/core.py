@@ -1,14 +1,9 @@
+import physical_dualism as pd
 import numpy as np
 
 from .matrices import compute_global_matrices
 from .utils import clip_small_eigenvalues, get_relative_error
 
-
-def approximate_natural_frequency_from_stress(m, a, sigma, ro):
-    return m * np.pi / a * np.sqrt(sigma / ro)
-
-def approximate_stress_from_natural_frequency(m, a, omega, ro):
-    return (omega * a / (m * np.pi))**2 * ro
 
 def solve_eigenvalue_problem(inv_G, A, normalize_eigenvalues=None):
     # As per eq. 6.48 from [Milasinovic1997]
@@ -55,10 +50,10 @@ def perform_iteration(integral_db, beam_type, strip_data, materials, astiff_shap
 
     ro = float(np.mean([mat['ro'] for mat in materials.values()]))
 
-    omega_approx = approximate_natural_frequency_from_stress(m, a, sigma_cr, ro)
+    omega_approx = pd.approximate_natural_frequency_from_stress(m, a, sigma_cr, ro)
     omega_rel_err = get_relative_error(omega, omega_approx)
 
-    sigma_cr_approx = approximate_stress_from_natural_frequency(m, a, omega, ro)
+    sigma_cr_approx = pd.approximate_stress_from_natural_frequency(m, a, omega, ro)
     sigma_cr_rel_err = get_relative_error(sigma_cr, sigma_cr_approx)
 
     Phi_rel_err = get_relative_error(Phi_omega, Phi_sigma_cr)

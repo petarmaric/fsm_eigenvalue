@@ -1,6 +1,7 @@
 beam_integrals>=1.1,<2.0
 networkx>=1.11,<2.0
 numpy>=1.11,<2.0
+physical_dualism>=1.0,<2.0
 PyYAML>=3.11,<4.0
 requests>=2.18,<3.0
 tables>=3.2,<4.0
