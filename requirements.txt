@@ -5,3 +5,4 @@ physical_dualism>=1.0,<2.0
 PyYAML>=3.11,<4.0
 requests>=2.18,<3.0
 tables>=3.2,<4.0
+tzlocal>=1.5,<2.0
