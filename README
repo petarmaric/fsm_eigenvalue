@@ -27,6 +27,25 @@ To install fsm_eigenvalue run::
 
     $ pip install fsm_eigenvalue
 
+Python API usage
+================
+
+Quick start::
+
+    >>> import logging
+    >>> logging.basicConfig(level=logging.DEBUG)
+
+    >>> from fsm_eigenvalue.compute import parameter_sweep
+    >>> from fsm_eigenvalue.load import load_data_from
+    >>> from fsm_eigenvalue.store import store_results_to
+
+    >>> data_file = 'examples/data-files/barbero-viscoelastic.yaml'
+    >>> results_file = data_file.replace('.yaml', '.hdf5')
+
+    >>> beam_type_id, search_space, nodal_graph, strip_data, materials, astiff_shape = load_data_from(data_file)
+    >>> with parameter_sweep(beam_type_id, search_space, strip_data, materials, astiff_shape) as results_iterator:
+    ...     store_results_to(results_file, data_file, search_space, astiff_shape, results_iterator)
+
 Contribute
 ==========
 
