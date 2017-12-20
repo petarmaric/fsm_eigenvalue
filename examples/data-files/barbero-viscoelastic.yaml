@@ -1,7 +1,7 @@
 search_space: # start, stop, step
   a:   [100.00,  4000.00,  0.50] # [mm] strip length
   t_b: [  2.00,     9.00,  0.05] # [mm] base strip thickness (t = t_b * t_s)
-  m:   [  1   ,    31   ,  1   ] # [no unit] mode (int)
+  m:   [  1   ,    51   ,  1   ] # [no unit] mode (int)
 
 
 geometry:
