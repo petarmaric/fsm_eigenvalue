@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fsm_eigenvalue',
-    version='0.1.0.dev',
+    version='1.0.0',
     url='https://bitbucket.org/petar/fsm_eigenvalue',
     license='BSD',
     author='Petar Maric',
@@ -15,7 +15,7 @@ setup(
                 'prismatic shell structures.',
     long_description=open('README').read(),
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'Intended Audience :: Science/Research',
