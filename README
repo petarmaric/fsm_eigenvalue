@@ -27,6 +27,17 @@ To install fsm_eigenvalue run::
 
     $ pip install fsm_eigenvalue
 
+Console app usage
+=================
+
+Quick start::
+
+    $ fsm_eigenvalue <filename>
+
+Show help::
+
+    $ fsm_eigenvalue --help
+
 Python API usage
 ================
 
