@@ -27,5 +27,8 @@ setup(
     ],
     platforms='any',
     packages=find_packages(),
+    entry_points={
+        'console_scripts': ['fsm_eigenvalue=fsm_eigenvalue.shell:main'],
+    },
     install_requires=open('requirements.txt').read().splitlines(),
 )
