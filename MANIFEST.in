@@ -1,6 +1,7 @@
 include AUTHORS
+include CHANGELOG
 include LICENSE
-include README
+include README.rst
 
 include MANIFEST.in
 include requirements.txt

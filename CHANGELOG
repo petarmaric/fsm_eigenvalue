@@ -1,0 +1,12 @@
+fsm_eigenvalue 1.0.1 (August 29, 2019)
+======================================
+
+Bugfixes
+--------
+
+    * Migrated from Bitbucket (Mercurial) to GitHub (Git).
+
+fsm_eigenvalue 1.0.0 (December 20, 2017)
+========================================
+
+    * Initial release.
