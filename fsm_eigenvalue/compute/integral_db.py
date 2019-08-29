@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 INTEGRAL_DB_CACHE_DIR = os.path.join(BASE_CACHE_DIR, 'integrals')
-INTEGRAL_DB_URL_FMT = "https://bitbucket.org/petar/export_beam_integrals/downloads/%s.hdf5"
+INTEGRAL_DB_URL_FMT = "https://github.com/petarmaric/export_beam_integrals/releases/download/1.0.1/%s.hdf5"
 INTEGRAL_DB_DOWNLOAD_BUFFER_SIZE = 100 * 1024
 
 

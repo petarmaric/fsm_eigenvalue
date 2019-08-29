@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name='fsm_eigenvalue',
     version='1.0.0',
-    url='https://bitbucket.org/petar/fsm_eigenvalue',
+    url='https://github.com/petarmaric/fsm_eigenvalue',
     license='BSD',
     author='Petar Maric',
     author_email='petarmaric@uns.ac.rs',
