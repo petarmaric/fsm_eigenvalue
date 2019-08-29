@@ -13,7 +13,7 @@ setup(
                 'method, used for parametric modeling of static and dynamic '\
                 'inelastic buckling, free vibration, damage and failure in '\
                 'prismatic shell structures.',
-    long_description=open('README').read(),
+    long_description=open('README.rst').read(),
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
